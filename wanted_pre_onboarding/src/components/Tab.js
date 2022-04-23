@@ -14,7 +14,7 @@ const Tap = () => {
     <React.Fragment>
       <Wrap>
         <div
-          className={index === 0 ? "active" : "" }
+          className={index === 0 ? "active" : ""}
           onClick={() => {
             setIndex(0);
           }}
@@ -46,7 +46,9 @@ const Tap = () => {
           Dropdown
         </div>
       </Wrap>
-      {index === 1 ? (
+      {index === 0 ? (
+        <Toggles />
+      ) : index === 1 ? (
         <Slider />
       ) : index === 2 ? (
         <Input />
@@ -65,12 +67,19 @@ const Wrap = styled.div`
   width: 500px;
   font-size: 30px;
   margin: auto;
+  border-bottom: 1px solid gray;
+  color: gray;
+  transition: all .4s ease-in-out;
   div{
-    margin-right: 20px;
+    margin-right: 40px;
     margin-top: 20px;
   }
+  div:after{
+    transition: 0.2s ease-out;
+  }
   .active{
-    border-bottom: 5px solid red;
+    border-bottom: 1px solid black;
+    color: black;
   }
 `;
 

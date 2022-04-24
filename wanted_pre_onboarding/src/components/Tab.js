@@ -19,7 +19,7 @@ const Tap = () => {
             setIndex(0);
           }}
         >
-          Toggles
+          TOGGLES
         </div>
         <div
           className={index === 1 ? "active" : ""}
@@ -27,7 +27,7 @@ const Tap = () => {
             setIndex(1);
           }}
         >
-          Slider
+          SLIDER
         </div>
         <div
           className={index === 2 ? "active" : ""}
@@ -35,7 +35,7 @@ const Tap = () => {
             setIndex(2);
           }}
         >
-          Input
+          INPUT
         </div>
         <div
           className={index === 3 ? "active" : ""}
@@ -43,7 +43,7 @@ const Tap = () => {
             setIndex(3);
           }}
         >
-          Dropdown
+          DROPDOWN
         </div>
       </Wrap>
       {index === 0 ? (
@@ -63,23 +63,20 @@ const Tap = () => {
 
 const Wrap = styled.div`
   display: flex;
-  background-color: aliceblue;
-  width: 500px;
+  width: 550px;
   font-size: 30px;
   margin: auto;
   border-bottom: 1px solid gray;
   color: gray;
-  transition: all .4s ease-in-out;
-  div{
+  div {
     margin-right: 40px;
     margin-top: 20px;
+    cursor: pointer;
   }
-  div:after{
-    transition: 0.2s ease-out;
-  }
-  .active{
-    border-bottom: 1px solid black;
+  .active {
     color: black;
+    transition: 0.4s ease-out;
+    border-bottom: black;
   }
 `;
 

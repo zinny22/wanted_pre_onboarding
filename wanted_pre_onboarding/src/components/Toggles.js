@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Toggles =()=>{
-  return(
+const Toggles = () => {
+  return (
     <Wrap>
-      <input type='checkbox' id='toggle'></input>
-      <label for='toggle'></label>
+      <input type="checkbox" id="toggle"></input>
+      <label htmlFor="toggle"></label>
     </Wrap>
-  )
-}
+  );
+};
 
 const Wrap = styled.div`
   width: 500px;
@@ -17,36 +17,40 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  #toggle{
+  #toggle {
     display: none;
   }
-  label{
+  label {
     cursor: pointer;
     width: 300px;
     height: 60px;
-    background-color: beige;
+    background-color: #babdbe;
     border-radius: 30px;
     position: relative;
     transition: 0.4s ease-out;
   }
-  label:after{
-    content: '';
+  label:after {
+    content: "";
     width: 150px;
-    height: 50px;
-    background-color: rebeccapurple;
+    height: 45px;
+    background-color: white;
     position: absolute;
-    border-radius:40px;
-    top: 5px;
-    left: 7px;
+    border-radius: 40px;
+    top: 7px;
+    left: 10px;
     transition: 0.2s ease-out;
   }
-  #toggle:checked + label{
-    background-color: aqua;
+  #toggle:checked + label {
+    background-color: #babdbe;
   }
-  #toggle:checked + label:after{
-    background-color: red;
+  #toggle:checked + label:after {
+    background-color: white;
     left: 140px;
   }
-`
+  div {
+    display: flex;
+    position: absolute;
+  }
+`;
 
 export default Toggles;
